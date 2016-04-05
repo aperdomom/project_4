@@ -7,3 +7,4 @@
 *.iml
 .idea/
 app/build/
+backend/build/
