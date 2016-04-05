@@ -9,6 +9,7 @@ package com.example.Alexandra.myapplication.backend;
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.ApiNamespace;
+import com.javajokes.JokeClass;
 
 import javax.inject.Named;
 
@@ -29,6 +30,14 @@ public class MyEndpoint {
     public MyBean sayHi(@Named("name") String name) {
         MyBean response = new MyBean();
         response.setData("Hi, " + name);
+
+        return response;
+    }
+
+    @ApiMethod(name = "pullJoke")
+    public MyBean pullJoke() {
+        MyBean response = new MyBean();
+        response.setData(JokeClass.getJoke());
 
         return response;
     }
