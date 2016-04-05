@@ -1,3 +1,4 @@
 <resources>
+    <string name="app_name">Build it Bigger Free</string>
     <string name="hello_world">Hello from the free version!</string>
 </resources>

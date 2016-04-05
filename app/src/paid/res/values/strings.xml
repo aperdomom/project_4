@@ -1,3 +1,4 @@
 <resources>
+    <string name="app_name">Build it Bigger</string>
     <string name="hello_world">This is the paid version! Please enjoy the lack of ads.</string>
 </resources>

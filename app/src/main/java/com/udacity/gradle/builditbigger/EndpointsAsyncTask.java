@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v4.util.Pair;
-import android.widget.Toast;
 
 import com.example.alexandra.androidlibrary.AndroidLibActivity;
 import com.example.alexandra.myapplication.backend.myApi.MyApi;
@@ -25,13 +24,12 @@ class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> 
             MyApi.Builder builder =
                     new MyApi.Builder(AndroidHttp.newCompatibleTransport(),
                                       new AndroidJsonFactory(), null)
-                            .setRootUrl("https://api-project-818532697731.appspot.com/_ah/api/");
+                            .setRootUrl("https://mybackend-1272.appspot.com/_ah/api/");
 
             myApiService = builder.build();
         }
 
         context = params[0].first;
-        String name = params[0].second;
 
         try {
             return myApiService.pullJoke().execute().getData();
